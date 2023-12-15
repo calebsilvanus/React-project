@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
+import Cart from "./components/cart/Cart";
 import burger1 from "../../assets/burger1.png";
 import burger2 from "../../assets/burger2.png";
+import "./styles/cart.scss";
 // import burger3 here
 
 const CartItem = ({ value, title, img, increment, decrement }) => (

@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AiOutlineEye } from "react-icons/ai";
+import MyOrders from "./components/myOrders/MyOrders";
 
+<Route path="/myorders" element={<MyOrders />} />
 const MyOrders = () => {
   const arr = [1, 2, 3, 4];
 
@@ -21,8 +23,22 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-//     Add the code for the table body
-           
+          <tbody>
+{arr.map((i) => (
+<tr key={i}>
+<td>#sdkfsdfdsf</td>
+<td>Processing</td>
+<td>23</td>
+<td>₹{2132}</td>
+<td>COD</td>
+<td>
+<Link to={`/order/${"asdsds"}`}>
+<AiOutlineEye />
+</Link>
+</td>
+</tr>
+))}
+</tbody>;
           </tbody>
         </table>
       </main>
